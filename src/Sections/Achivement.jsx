@@ -7,12 +7,6 @@ import VirtuslabLogo from "../assets/achivement (1).png";
 import SemiflatLogo from "../assets/achivement (2).png";
 import AutentikaLogo from "../assets/achivement (3).png";
 
-const FallbackLogo = ({ label }) => (
-  <div className="flex h-full w-full items-center justify-center rounded bg-[#1a1b1a] text-[11px] font-semibold text-white">
-    {label}
-  </div>
-);
-
 /* ---------- Data ---------- */
 const DESCRIPTION =
   "I'm winner of the world's most prestigious web designthat has more-or-less normal awards in the fields.";
@@ -27,14 +21,14 @@ const DATA = {
       description: DESCRIPTION,
     },
     {
-      logo: SemiflatLogo,
+      logo: AutentikaLogo,
       title: "Senior Product Designer",
       company: "Semiflat Studio",
       period: "2020 - 2023",
       description: DESCRIPTION,
     },
     {
-      logo: AutentikaLogo,
+      logo: SemiflatLogo,
       title: "Senior User Interface Designer",
       company: "Autentika",
       period: "2018 - 2020",
@@ -43,14 +37,14 @@ const DATA = {
   ],
   Education: [
     {
-      logo: <FallbackLogo label="UX" />,
+      logo: VirtuslabLogo,
       title: "Master of Design",
       company: "Design University",
       period: "2016 - 2018",
       description: DESCRIPTION,
     },
     {
-      logo: <FallbackLogo label="BA" />,
+      logo: VirtuslabLogo,
       title: "Bachelor of Fine Arts",
       company: "Art Institute",
       period: "2012 - 2016",
@@ -59,14 +53,14 @@ const DATA = {
   ],
   Awards: [
     {
-      logo: <FallbackLogo label="AW" />,
+      logo: VirtuslabLogo,
       title: "Site of the Day",
       company: "Awwwards",
       period: "2023",
       description: DESCRIPTION,
     },
     {
-      logo: <FallbackLogo label="CS" />,
+      logo: VirtuslabLogo,
       title: "Best UI Design",
       company: "CSS Design Awards",
       period: "2021",
@@ -76,6 +70,8 @@ const DATA = {
 };
 
 const TABS = Object.keys(DATA);
+
+// const TABS= object.key(DATA) is this - const TABS = ["Experience", "Education", "Awards"]
 
 /* ---------- Icons ---------- */
 const CalendarIcon = () => (
@@ -100,69 +96,71 @@ export default function Section() {
   const [active, setActive] = useState("Experiences");
 
   return (
-    <section className="min-h-screen w-full bg-[#140C1C] px-[295px] py-30 text-white">
-      {/* Heading */}
-      <div className="flex flex-col items-center text-center">
-        <SectionHeading
-          className={"max-w-[500px] max-auto"}
-          heading={"MY Background and Achievements"}
-          subHeading={"Behind the Pixels"}
-        />
+    <section className="mx-auto bg-[#140C1C] text-white py-30">
+      <div className="container">
+        {/* Heading */}
+        <div className="flex flex-col items-center text-center">
+          <SectionHeading
+            className={"max-w-[500px] max-auto"}
+            heading={"MY Background and Achievements"}
+            subHeading={"Behind the Pixels"}
+          />
 
-        {/* Tabs */}
-        <div className="mt-[34px] inline-flex items-center gap-[10px] rounded-full border-2 border-[#8b4dff] bg-[#8b4dff] p-[2px]">
-          {TABS.map((tab) => {
-            const isActive = tab === active;
-            return (
-              <button
-                key={tab}
-                type="button"
-                onClick={() => setActive(tab)}
-                className={`rounded-full px-[11px] py-[6px] text-[9px] font-semibold leading-none transition-colors ${
-                  isActive
-                    ? "bg-[#150f1e] text-white"
-                    : "bg-transparent text-white"
-                }`}
-              >
-                {tab}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Card */}
-      <div className="mx-auto mt-[40px] max-w-[1290px] max-h-[717px] rounded-xl border border-[#2b2535] px-[62px] py-[62px]">
-        {DATA[active].map((item, i, arr) => (
-          <div
-            key={item.title + item.company}
-            className={`flex items-start justify-between gap-6 pb-[26px] pt-[22px] first:pt-0 last:pb-0 ${
-              i !== arr.length - 1 ? "border-b border-[#2b2535]" : ""
-            }`}
-          >
-            <div className="flex items-start gap-[22px]">
-              <div className="h-8 w-8 shrink-0 overflow-hidden rounded">
-                {item.logo}
-              </div>
-              <div>
-                <h3 className="text-[12px] font-normal uppercase leading-4 text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-[9px] text-[8px] font-normal uppercase leading-[10px] text-white">
-                  {item.company}
-                </p>
-                <p className="mt-[13px] max-w-[340px] text-[10px] leading-[14px] text-[#8c8896]">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex shrink-0 items-center gap-[6px] pt-[2px] text-[12px] leading-4 text-[#a9a5b3]">
-              <CalendarIcon />
-              <span>{item.period}</span>
-            </div>
+          {/* Tabs */}
+          <div className="mt-[34px] flex items-center gap-2.75 rounded-full border-2 border-[#8b4dff] bg-[#8b4dff] p-[2px]">
+            {TABS.map((tab) => {
+              const isActive = tab === active;
+              return (
+                <button
+                  key={tab}
+                  type="button"
+                  onClick={() => setActive(tab)}
+                  className={`rounded-full px-[11px] py-[12px] text-[9px] cursor-pointer font-semibold leading-none transition-colors ${
+                    isActive
+                      ? "bg-[#150f1e] text-white"
+                      : "bg-transparent text-white"
+                  }`}
+                >
+                  {tab}
+                </button>
+              );
+            })}
           </div>
-        ))}
+        </div>
+
+        {/* Card */}
+        <div className="mx-auto mt-[40px] max-w-[1290px] max-h-[717px] rounded-xl border border-[#2b2535] px-[62px] py-[62px]">
+          {DATA[active].map((item, i, arr) => (
+            <div
+              key={item.title + item.company}
+              className={`flex items-start justify-between gap-6 pb-[26px] pt-[22px] first:pt-0 last:pb-0 ${
+                i !== arr.length - 1 ? "border-b border-[#2b2535]" : ""
+              }`}
+            >
+              <div className="flex items-start gap-[22px] pb-30">
+                <div className="h-8 w-8 shrink-0 overflow-hidden rounded">
+                  <img src={item.logo} alt="logo" />
+                </div>
+                <div>
+                  <h3 className="text-[12px] font-normal uppercase leading-4 text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-[9px] text-[8px] font-normal uppercase leading-[10px] text-white">
+                    {item.company}
+                  </p>
+                  <p className="mt-[13px] max-w-[340px] text-[10px] leading-[14px] text-[#8c8896]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex shrink-0 items-center gap-[6px] pt-[2px] text-[12px] leading-4 text-[#a9a5b3]">
+                <CalendarIcon />
+                <span>{item.period}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

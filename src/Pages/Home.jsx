@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner";
+import ClientsFeedback from "../Sections/ClientsFeedback";
 import Footer from "../Components/Footer";
 import ImageLoop from "../Components/LogoSlider";
 import NavBar from "../Components/Navbar";
@@ -24,6 +25,7 @@ const Home = () => {
       <MyRecentWork />
       <Role/>
       <Achivement/>
+      <ClientsFeedback/>
       <Blogs/>
       <Footer/>
     </div>

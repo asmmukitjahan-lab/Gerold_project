@@ -190,7 +190,7 @@
 position: absolute;
 width: 650px;
 height: 550px;
-left: calc(50% - 650px/2);
+left: calc(45% - 650px/2);
 top: -21px;
 
 background: linear-gradient(261.51deg, #8750F7 0%, rgba(115, 67, 210, 0.1) 100%);

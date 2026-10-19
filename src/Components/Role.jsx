@@ -73,12 +73,12 @@ const Role = () => {
       `}</style>
 
       {/* Back band: dark violet, tilted upward to the right */}
-      <div className="absolute -left-10 -right-10 top-[48%] flex max-h-27 -rotate-[3.2deg] items-center overflow-hidden bg-[#1D1129] sm:top-[52%] sm:h-27">
+      <div className="absolute -left-10 -right-10 top-[48%] flex max-h-27 rotate-[-3.2deg] items-center overflow-hidden bg-[#1D1129] sm:top-[52%]  h-18 sm:h-27">
         <Track items={SECONDARY} reverse />
       </div>
-
+ 
       {/* Front band: bright purple, tilted downward to the right */}
-      <div className="absolute -left-10 -right-10 top-[20%] z-10 flex max-h-27 rotate-[1.8deg] items-center overflow-hidden bg-[#8750F7] sm:h-[72px]">
+      <div className="absolute -left-10 -right-10 top-[20%] z-10 flex h-18 sm:h-27 rotate-[1.8deg] items-center overflow-hidden bg-primary">
         <Track items={PRIMARY} />
       </div>
       <div className="role_shadow">
