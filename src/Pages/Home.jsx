@@ -13,7 +13,10 @@ import MyService from "../Sections/MyService";
 import RecentWork from "../Sections/RecentWork";
 
 const Home = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 030af61d092d6c0e10d6b3e10b4605c787033a60
   return (
     <div>
       <NavBar />

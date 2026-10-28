@@ -3,10 +3,13 @@ import SectionHeading from "../Components/SectionHeading";
 import image_1 from "../assets/Portfolio (1).png";
 import image_2 from "../assets/Portfolio (2).png";
 import image_3 from "../assets/Portfolio (3).png";
+<<<<<<< HEAD
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import ArrowButton from "../Components/CustomSliderArrow";
+=======
+>>>>>>> 030af61d092d6c0e10d6b3e10b4605c787033a60
 
 const RecentData = [
   {
@@ -22,6 +25,7 @@ const RecentData = [
     title: "New Age",
     description: "Project was about precision and information...",
   },
+<<<<<<< HEAD
   {
     id: 3,
     img: image_3,
@@ -34,6 +38,9 @@ const RecentData = [
     title: "Sebastian",
     description: "Project was about precision and information...",
   },
+=======
+
+>>>>>>> 030af61d092d6c0e10d6b3e10b4605c787033a60
   {
     id: 3,
     img: image_3,
@@ -46,6 +53,7 @@ const MyRecentWork = () => {
   return (
     <section className="py-30 bg-[#140C1C]">
       <div className="container">
+<<<<<<< HEAD
         <div className="flex justify-between items-end gap-10 pb-15">
           <SectionHeading
             className="max-w-[440px]"
@@ -95,6 +103,20 @@ const MyRecentWork = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+=======
+        <SectionHeading
+          className="max-w[440px]"
+          subHeading={"My Recent Work"}
+          heading={"Recent work for MY clients!"}
+        />
+      </div>
+
+      <div className="flex gap-7.5 justify-center py-15">
+        {RecentData.map((item) => (
+          <PortfolioCard {...item} />
+        ))}
+      </div>
+>>>>>>> 030af61d092d6c0e10d6b3e10b4605c787033a60
     </section>
   );
 };
