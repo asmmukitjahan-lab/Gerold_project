@@ -22,7 +22,6 @@ const RecentData = [
     title: "New Age",
     description: "Project was about precision and information...",
   },
-
   {
     id: 3,
     img: image_3,
