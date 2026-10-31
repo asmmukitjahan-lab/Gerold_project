@@ -101,7 +101,7 @@ export default function Section() {
         {/* Heading */}
         <div className="flex flex-col items-center text-center">
           <SectionHeading
-            className={"max-w-[500px] max-auto"}
+            className={"max-w-[535px] max-auto"}
             heading={"MY Background and Achievements"}
             subHeading={"Behind the Pixels"}
           />
@@ -115,7 +115,7 @@ export default function Section() {
                   key={tab}
                   type="button"
                   onClick={() => setActive(tab)}
-                  className={`rounded-full px-[11px] py-[12px] text-[9px] cursor-pointer font-semibold leading-none transition-colors ${
+                  className={`rounded-full px-[25px] py-[12px] text-[15px] leading-5 cursor-pointer font-bold font-sora leading-none transition-colors ${
                     isActive
                       ? "bg-[#150f1e] text-white"
                       : "bg-transparent text-white"
@@ -129,7 +129,7 @@ export default function Section() {
         </div>
 
         {/* Card */}
-        <div className="mx-auto mt-[40px] max-w-[1290px] max-h-[717px] rounded-xl border border-[#2b2535] px-[62px] py-[62px]">
+        <div className="mx-auto mt-[40px] max-w-[1290px] max-h-[716px] rounded-xl border border-[#2b2535] px-[62px] py-[62px]">
           {DATA[active].map((item, i, arr) => (
             <div
               key={item.title + item.company}
@@ -137,25 +137,25 @@ export default function Section() {
                 i !== arr.length - 1 ? "border-b border-[#2b2535]" : ""
               }`}
             >
-              <div className="flex items-start gap-[22px] pb-30">
-                <div className="h-8 w-8 shrink-0 overflow-hidden rounded">
+              <div className="flex items-start gap-[22px]">
+                <div className="h-[59px] w-[59px] shrink-0 overflow-hidden rounded">
                   <img src={item.logo} alt="logo" />
                 </div>
                 <div>
-                  <h3 className="text-[12px] font-normal uppercase leading-4 text-white">
+                  <h3 className="text-[20px] font-sora uppercase leading-6 text-[#FFFFFF]">
                     {item.title}
                   </h3>
-                  <p className="mt-[9px] text-[8px] font-normal uppercase leading-[10px] text-white">
+                  <p className="mt-[9px] text-[15px] font-sora uppercase leading-[22.5px] text-[#DDDDDD]">
                     {item.company}
                   </p>
-                  <p className="mt-[13px] max-w-[340px] text-[10px] leading-[14px] text-[#8c8896]">
+                  <p className="mt-[13px] max-w-[624px] font-sora text-[18px] leading-[28px] text-white/60">
                     {item.description}
                   </p>
                 </div>
               </div>
 
-              <div className="flex shrink-0 items-center gap-[6px] pt-[2px] text-[12px] leading-4 text-[#a9a5b3]">
-                <CalendarIcon />
+              <div className="max-w-[157px] flex shrink-0 items-center gap-[10px] pt-[2px] text-[20px] font-sora leading-[30px] text-white/60">
+                <CalendarIcon/>
                 <span>{item.period}</span>
               </div>
             </div>

@@ -7,11 +7,6 @@ import brand_4 from "../assets/Brand-4.png";
 import brand_5 from "../assets/Brand-5.png";
 import brand_6 from "../assets/Brand-6.png";
 import brand_7 from "../assets/Brand-7.png";
-<<<<<<< HEAD
-
-=======
-import SectionHeading from "./SectionHeading";
->>>>>>> 030af61d092d6c0e10d6b3e10b4605c787033a60
 
 const Brand_1 = () => {
   return <img src={brand_1} alt="brand logo" />;
@@ -88,9 +83,8 @@ function ImageLoop() {
       style={{ height: "200px", position: "relative", overflow: "hidden" }}
     >
       {/* Basic horizontal loop */}
-<<<<<<< HEAD
-      <div className="pb-[60px]">
-        <p className={"text-white text-base font-sora uppercase font-semibold leading-[24px] after_before"}>
+      <div className="pb-[60px] ">
+        <p className="text-white text-center text-base font-sora uppercase font-semibold leading-[24px] after_before">
           <span className="text-primary">100+</span>
           Trusted Clients Over the world
         </p>
@@ -98,16 +92,6 @@ function ImageLoop() {
       <LogoLoop
         logos={techLogos}
         speed={70}
-=======
-      <div className="pb-[60px] flex items-center justify-center">
-        <SectionHeading
-          subHeading={"100+"}
-        />
-      </div>
-      <LogoLoop
-        logos={techLogos}
-        speed={100}
->>>>>>> 030af61d092d6c0e10d6b3e10b4605c787033a60
         direction="left"
         logoHeight={60}
         gap={60}

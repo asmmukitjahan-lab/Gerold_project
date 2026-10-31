@@ -1,12 +1,10 @@
-
-
-const ArrowButton=({
+const ArrowButton = ({
   direction = "right",
   onClick,
   className = "",
   disabled = false,
   ariaLabel,
-})=> {
+}) => {
   const isLeft = direction === "left";
 
   return (
@@ -14,9 +12,7 @@ const ArrowButton=({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      aria-label={
-        ariaLabel || `Arrow ${direction}`
-      }
+      aria-label={ariaLabel || `Arrow ${direction}`}
       className={`
         group flex h-[55px] w-[55px]
         items-center justify-center
@@ -38,9 +34,7 @@ const ArrowButton=({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`transition-transform duration-300 ${
-          isLeft
-            ? "group-hover:-translate-x-1"
-            : "group-hover:translate-x-1"
+          isLeft ? "group-hover:-translate-x-1" : "group-hover:translate-x-1"
         }`}
         aria-hidden="true"
       >
@@ -64,6 +58,6 @@ const ArrowButton=({
       </svg>
     </button>
   );
-}
+};
 
 export default ArrowButton;
