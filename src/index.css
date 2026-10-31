@@ -54,7 +54,7 @@ border-radius: 9999px;
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
-	width: calc(43% - 24px);
+	width: calc(40% - 24px);
 	height: 1px;
 	background: #2E314C;
 	z-index: 100;
@@ -65,7 +65,7 @@ border-radius: 9999px;
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	width: calc(43% - 24px);
+	width: calc(40% - 24px);
 	height: 1px;
 	background: #2E314C;
 	z-index: 100
